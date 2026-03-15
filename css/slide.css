@@ -1,0 +1,137 @@
+/* 更改按鈕圖案 */
+.swiperControl {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 80%;
+}
+
+.swiperBtnR,
+.swiperBtnL {
+    width: 60px;
+    height: 60px;
+}
+
+/* .swiper-slide img{
+    margin: 0 auto;
+} */
+@media (max-width: 768px) {
+
+    .swiperBtnR,
+    .swiperBtnL {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 568px) {
+
+    .swiperBtnR,
+    .swiperBtnL {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.swiperBtnR:after {
+    content: "";
+    background-image: url(../images/slide/slide-right.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.swiperBtnL:after {
+    content: "";
+    background-image: url(../images/slide/slide-left.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.swiperBtnR_02:after {
+    content: "";
+    background-image: url(../images/slide/right02.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.swiperBtnL_02:after {
+    content: "";
+    background-image: url(../images/slide/left02.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Review Swiper */
+.mySwiper {
+    overflow: visible;
+    padding: 10px 0 40px;
+}
+
+.mySwiper .swiper-slide,
+.mySwiper2 .swiper-slide {
+    width: 68%;
+    /* opacity: 0.5; */
+    /* transition: opacity 0.3s; */
+}
+
+.thing06-1 .swiperBtnR {
+    right: 10%;
+}
+
+.thing06-1 .swiperBtnL {
+    left: 8.5%;
+}
+
+.mySwiper .swiper-slide-active,
+.mySwiper2 .swiper-slide-active {
+    opacity: 1;
+}
+
+/* Pagination */
+.thing06-1 .swiper-pagination,
+.thing07-1 .swiper-pagination,
+.thing24-1 .swiper-pagination {
+    bottom: 0;
+}
+
+.thing06-1 .swiper-pagination-bullet,
+.thing07-1 .swiper-pagination-bullet,
+.thing24-1 .swiper-pagination-bullet {
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 2px solid #333;
+    opacity: 1;
+    margin: 0 6px !important;
+}
+
+.thing06-1 .swiper-pagination-bullet-active,
+.thing07-1 .swiper-pagination-bullet-active,
+.thing24-1 .swiper-pagination-bullet-active {
+    background: #333;
+    border-color: #333;
+}
+
+@media (max-width: 768px) {
+
+    .thing06-1 .swiper-pagination-bullet,
+    .thing07-1 .swiper-pagination-bullet,
+    .thing24-1 .swiper-pagination-bullet {
+        width: 12px;
+        border: 1px solid #333;
+        height: 12px;
+    }
+}

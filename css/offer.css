@@ -1,0 +1,7 @@
+.offerBtn {
+    transition: all .3s;
+}
+
+.offerBtn:hover {
+    opacity: 0.8;
+}

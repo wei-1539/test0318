@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--描述-->
+  <meta name="description" content="">
+  <!--關鍵字-->
+  <meta name="keywords" content="">
+  <!--縮圖-->
+  <meta property="og:image" content="預覽圖 URL" />
+  <!--icon-->
+  <link rel="shortcut icon" href="icon圖片">
+
+
+  <!-- 【外部套件】CSS導入 S -->
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- /*畫面跳到指定位置*/ -->
+  <script>
+    $(document).ready(function () {
+      $("a.scrollLink").click(function (event) {
+        event.preventDefault();
+        $("html, body").animate(
+          {
+            /* 0 可以替換 $("class名稱(要記得加.)").height() 【header有需要固定在最上方時 使用這個👇】*/
+            scrollTop: $($(this).attr("href")).offset().top - $("nav").height(),
+            // 【header不用固定在最上方時 使用這個👇】
+            // scrollTop: $($(this).attr("href")).offset().top - 0,
+          },
+          400
+        );
+      });
+    });
+  </script>
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <!-- font-Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- animate -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- 【外部套件】CSS導入 E-->
+
+  <!-- CSS導入 S -->
+  <!-- 基礎設定 & 定位 -->
+  <link rel="stylesheet" href="css/all.css">
+  <!-- 導覽列 -->
+  <link rel="stylesheet" href="css/nav.css">
+  <!-- 其他 -->
+  <link rel="stylesheet" href="css/other.css">
+  <!-- 購物車 -->
+  <link rel="stylesheet" href="css/offer.css">
+  <!-- 動畫 -->
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- swiper -->
+  <link rel="stylesheet" href="css/slide.css">
+  <!-- CSS導入 E-->
+</head>
+
+<body>
+  <nav>
+    <!-- 倒數計時S  不使用時就註解即可 -->
+    <div class="clock-container">活動截止：<span id="timer"></span></div>
+    <!-- 倒數計時E -->
+
+    <!-- 導覽列S -->
+    <!-- 請看導覽列模板 -->
+    <!-- 導覽列E -->
+  </nav>
+
+  <div class="wrap">
+    <section class="bg BG_01">
+      <div class="container relative z-1">
+        <img class="lazy" data-src="./images/BG/BG_01.png" width="1000" height="150">
+      </div>
+    </section>
+    <section class="bg BG_02">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_02.png" width="1000" height="2095">
+        <img class="lazy absolute thing02-1" data-src="images/thing01-1.png" width="1005" height="310">
+        <img class="lazy absolute thing02-2" data-src="images/thing01-2.png" width="671" height="460">
+        <img class="lazy absolute thing02-3" data-src="images/thing01-3.png" width="179" height="945">
+        <img class="lazy absolute thing02-4" data-src="images/thing01-4.png" width="1001" height="2097">
+        <img class="lazy absolute thing02-5" data-src="images/thing01-5.png" width="1001" height="2097">
+      </div>
+    </section>
+    <section class="bg BG_03">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_03.png" width="1000" height="1403">
+        <img class="lazy absolute thing03-1" data-src="images/thing03-1.png" width="859" height="247">
+        <img class="lazy absolute thing03-2" data-src="images/thing03-2.png" width="932" height="169">
+        <img class="lazy absolute thing03-3" data-src="images/thing03-3.png" width="773" height="271">
+      </div>
+    </section>
+    <section class="bg BG_04">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_04.png" width="1000" height="3002">
+        <img class="lazy absolute thing04-1" data-src="images/thing04-1.png" width="686" height="684">
+        <img class="lazy absolute thing04-2" data-src="images/thing04-2.png" width="689" height="674">
+        <img class="lazy absolute thing04-3" data-src="images/thing04-3.png" width="526" height="288">
+        <img class="lazy absolute thing04-4" data-src="images/thing04-4.png" width="1000" height="2187">
+        <img class="lazy absolute thing04-5" data-src="images/thing04-5.png" width="790" height="464">
+      </div>
+    </section>
+    <section class="bg BG_05">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_05.png" width="1000" height="2176">
+      </div>
+    </section>
+    <section class="bg BG_06">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_06.png" width="1000" height="2144">
+        <!-- 輪播圖 S -->
+        <div class="absolute thing06-1">
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!-- 自由編輯區 S -->
+              <div class="swiper-slide">
+                <img src="./images/slide/slide01-1.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide01-2.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide01-3.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide01-1.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide01-2.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide01-3.png" alt="">
+              </div>
+              <!-- 自由編輯區 E -->
+            </div>
+          </div>
+          <div class="swiper-button-next swiperBtnR"></div>
+          <div class="swiper-button-prev swiperBtnL"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- 輪播圖 E -->
+      </div>
+    </section>
+    <section class="bg BG_07">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_07.png" width="1000" height="704">
+        <!-- 輪播圖 S -->
+        <div class="absolute thing07-1">
+          <!-- Swiper -->
+          <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+              <!-- 自由編輯區 S -->
+              <div class="swiper-slide">
+                <img src="./images/slide/slide02-1.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide02-2.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide02-3.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide02-1.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide02-2.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide02-3.png" alt="">
+              </div>
+              <!-- 自由編輯區 E -->
+            </div>
+          </div>
+          <!-- <div class="swiper-button-next swiperBtnR"></div>
+                    <div class="swiper-button-prev swiperBtnL"></div> -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- 輪播圖 E -->
+      </div>
+    </section>
+    <section class="bg BG_08">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_08.png" width="1000" height="2179">
+        <img class="lazy absolute thing08-1" data-src="images/thing08-1.png" width="259" height="270">
+        <img class="lazy absolute thing08-2" data-src="images/thing08-2.png" width="930" height="421">
+      </div>
+    </section>
+    <section class="bg BG_09">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_09.png" width="1000" height="1974">
+        <img class="lazy absolute thing09-1" data-src="images/thing09-1.png" width="338" height="55">
+        <img class="lazy absolute thing09-2" data-src="images/thing09-2.png" width="907" height="89">
+        <img class="lazy absolute thing09-3" data-src="images/thing09-3.png" width="929" height="444">
+        <img class="lazy absolute thing09-4" data-src="images/thing09-4.png" width="955" height="286">
+        <img class="lazy absolute thing09-5" data-src="images/thing09-5.png" width="1182" height="1128">
+        <img class="lazy absolute thing09-6" data-src="images/thing09-6.png" width="937" height="352">
+        <img class="lazy absolute thing09-7" data-src="images/thing09-7.png" width="629" height="111">
+      </div>
+    </section>
+    <section class="bg BG_10">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_10.png" width="1000" height="1134">
+      </div>
+    </section>
+    <section class="bg BG_11">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_11.png" width="1000" height="1135">
+      </div>
+    </section>
+    <section class="bg BG_12">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_12.png" width="1000" height="1949">
+        <img class="lazy absolute thing12-1-1" data-src="images/thing12-1.png" width="15" height="15">
+        <img class="lazy absolute thing12-1-2" data-src="images/thing12-1.png" width="15" height="15">
+        <img class="lazy absolute thing12-1-3" data-src="images/thing12-1.png" width="15" height="15">
+        <img class="lazy absolute thing12-1-4" data-src="images/thing12-1.png" width="15" height="15">
+        <img class="lazy absolute thing12-1-5" data-src="images/thing12-1.png" width="15" height="15">
+        <img class="lazy absolute thing12-1-6" data-src="images/thing12-1.png" width="15" height="15">
+        <img class="lazy absolute thing12-2" data-src="images/thing12-2.png" width="877" height="152">
+        <img class="lazy absolute thing12-3" data-src="images/thing12-3.png" width="789" height="299">
+        <img class="lazy absolute thing12-4" data-src="images/thing12-4.png" width="482" height="86">
+        <img class="lazy absolute thing12-5" data-src="images/thing12-5.png" width="515" height="3">
+      </div>
+    </section>
+    <section class="bg BG_13">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_13.png" width="1000" height="2329">
+      </div>
+    </section>
+    <section class="bg BG_14">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_14.png" width="1000" height="3285">
+      </div>
+    </section>
+    <section class="bg BG_15">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_15.png" width="1000" height="1913">
+        <img class="lazy absolute thing15-1" data-src="images/thing15-1.png" width="56" height="162">
+        <img class="lazy absolute thing15-2" data-src="images/thing15-2.png" width="56" height="164">
+        <img class="lazy absolute thing15-3" data-src="images/thing15-3.png" width="56" height="271">
+        <img class="lazy absolute thing15-4" data-src="images/thing15-4.png" width="57" height="174">
+        <img class="lazy absolute thing15-5" data-src="images/thing15-5.png" width="55" height="162">
+        <img class="lazy absolute thing15-6" data-src="images/thing15-6.png" width="55" height="195">
+        <img class="lazy absolute thing15-7" data-src="images/thing15-7.png" width="55" height="219">
+        <img class="lazy absolute thing15-8" data-src="images/thing15-8.png" width="55" height="169">
+        <img class="lazy absolute thing15-9" data-src="images/thing15-9.png" width="602" height="786">
+        <img class="lazy absolute thing15-10" data-src="images/thing15-10.png" width="602" height="787">
+        <img class="lazy absolute thing15-11" data-src="images/thing15-11.png" width="874" height="118">
+      </div>
+    </section>
+    <section class="bg BG_16">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_16.png" width="1000" height="1328">
+        <img class="lazy absolute thing16-1" data-src="images/thing16-1.png" width="25" height="172">
+        <img class="lazy absolute thing16-2" data-src="images/thing16-2.png" width="861" height="98">
+        <img class="lazy absolute thing16-3" data-src="images/thing16-3.png" width="851" height="293">
+        <img class="lazy absolute thing16-4" data-src="images/thing16-4.png" width="583" height="118">
+        <img class="lazy absolute thing16-5" data-src="images/thing16-5.png" width="583" height="120">
+        <img class="lazy absolute thing16-6" data-src="images/thing16-6.png" width="583" height="121">
+        <img class="lazy absolute thing16-7" data-src="images/thing16-7.png" width="583" height="124">
+        <img class="lazy absolute thing16-8" data-src="images/thing16-8.png" width="583" height="125">
+        <img class="lazy absolute thing16-9" data-src="images/thing16-9.png" width="583" height="126">
+        <img class="lazy absolute thing16-10-1" data-src="images/thing16-10.png" width="20" height="20">
+        <img class="lazy absolute thing16-10-2" data-src="images/thing16-10.png" width="20" height="20">
+        <img class="lazy absolute thing16-10-3" data-src="images/thing16-10.png" width="20" height="20">
+        <img class="lazy absolute thing16-10-4" data-src="images/thing16-10.png" width="20" height="20">
+        <img class="lazy absolute thing16-10-5" data-src="images/thing16-10.png" width="20" height="20">
+      </div>
+    </section>
+    <section class="bg BG_17">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_17.png" width="1000" height="1548">
+        <img class="lazy absolute thing17-1" data-src="images/thing17-1.png" width="418" height="274">
+      </div>
+    </section>
+    <section class="bg BG_18">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_18.png" width="1000" height="879">
+        <img class="lazy absolute thing18-1-1" data-src="images/thing18-1.png" width="31" height="31">
+        <img class="lazy absolute thing18-1-2" data-src="images/thing18-1.png" width="31" height="31">
+        <img class="lazy absolute thing18-1-3" data-src="images/thing18-1.png" width="31" height="31">
+        <img class="lazy absolute thing18-1-4" data-src="images/thing18-1.png" width="31" height="31">
+        <img class="lazy absolute thing18-2" data-src="images/thing18-2.png" width="826" height="204">
+      </div>
+    </section>
+    <section class="bg BG_19">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_19.png" width="1000" height="1554">
+        <img class="lazy absolute thing19-1" data-src="images/thing19-1.png" width="4" height="632">
+        <img class="lazy absolute thing19-before" data-src="images/before.png" width="813" height="581">
+        <img class="lazy absolute thing19-after" data-src="images/after.png" width="811" height="581">
+      </div>
+    </section>
+    <section class="bg BG_20">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_20.png" width="1000" height="321">
+        <img class="lazy absolute thing20-1" data-src="images/thing20-1.png" width="424" height="19">
+        <img class="lazy absolute thing20-2" data-src="images/thing20-2.png" width="811" height="221">
+      </div>
+    </section>
+    <section class="bg BG_21">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_21.png" width="1000" height="1846">
+        <img class="lazy absolute thing21-1" data-src="images/thing21-1.png" width="587" height="411">
+        <img class="lazy absolute thing21-2" data-src="images/thing21-2.png" width="544" height="322">
+        <img class="lazy absolute thing21-3" data-src="images/thing21-3.png" width="460" height="388">
+        <img class="lazy absolute thing21-4" data-src="images/thing21-4.png" width="585" height="331">
+        <img class="lazy absolute thing21-5" data-src="images/thing21-5.png" width="532" height="466">
+        <img class="lazy absolute thing21-6" data-src="images/thing21-6.png" width="566" height="275">
+        <img class="lazy absolute thing21-7" data-src="images/thing21-7.png" width="673" height="838">
+        <img class="lazy absolute thing21-8" data-src="images/thing21-8.png" width="1026" height="4674">
+        <img class="lazy absolute thing21-9" data-src="images/thing21-9.png" width="1026" height="4674">
+      </div>
+    </section>
+    <section class="bg BG_22">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_22.png" width="1000" height="1339">
+      </div>
+    </section>
+    <section class="bg BG_23">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_23.png" width="1000" height="2259">
+        <img class="lazy absolute thing23-1" data-src="images/thing23-1.png" width="802" height="1241">
+        <img class="lazy absolute thing23-2" data-src="images/thing23-2.png" width="1026" height="2307">
+        <img class="lazy absolute thing23-3" data-src="images/thing23-3.png" width="1026" height="2307">
+      </div>
+    </section>
+    <section class="bg BG_24">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_24.png" width="1000" height="1925">
+        <!-- 輪播圖 S -->
+        <div class="absolute thing24-1">
+          <!-- Swiper -->
+          <div class="swiper mySwiper3">
+            <div class="swiper-wrapper">
+              <!-- 自由編輯區 S -->
+              <div class="swiper-slide">
+                <img src="./images/slide/slide03-1.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide03-2.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide03-3.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide03-1.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide03-2.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide03-3.png" alt="">
+              </div>
+              <!-- 自由編輯區 E -->
+            </div>
+          </div>
+          <div class="swiper-button-next swiperBtnR"></div>
+          <div class="swiper-button-prev swiperBtnL"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- 輪播圖 E -->
+      </div>
+    </section>
+    <section class="bg BG_25">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_25.png" width="1000" height="1052">
+      </div>
+    </section>
+    <section class="bg BG_26">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_26.png" width="1000" height="2150">
+        <img class="lazy absolute thing26-1" data-src="images/thing26-1.png" width="259" height="271">
+        <img class="lazy absolute thing26-2" data-src="images/thing26-2.png" width="931" height="422">
+      </div>
+    </section>
+    <section class="bg BG_27">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_27.png" width="1000" height="1660">
+        <img class="lazy absolute thing27-1" data-src="images/thing27-1.png" width="337" height="55">
+        <img class="lazy absolute thing27-2" data-src="images/thing27-2.png" width="907" height="89">
+        <img class="lazy absolute thing27-3" data-src="images/thing27-3.png" width="930" height="445">
+        <img class="lazy absolute thing27-4" data-src="images/thing27-4.png" width="1182" height="1128">
+        <img class="lazy absolute thing27-5" data-src="images/thing27-5.png" width="956" height="286">
+      </div>
+    </section>
+    <section class="bg BG_28">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_28.png" width="1000" height="900">
+      </div>
+    </section>
+    <section class="bg BG_29">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_29.png" width="1000" height="1469">
+        <img class="lazy absolute thing29-1" data-src="images/thing29-1.png" width="864" height="914">
+        <img class="lazy absolute thing29-2" data-src="images/thing29-2.png" width="1028" height="862">
+        <img class="lazy absolute thing29-3" data-src="images/thing29-3.png" width="154" height="156">
+      </div>
+    </section>
+    <section class="bg BG_30">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_30.png" width="1000" height="1409">
+        <img class="lazy absolute thing30-1" data-src="images/thing30-1.png" width="874" height="907">
+        <img class="lazy absolute thing30-2" data-src="images/thing30-2.png" width="203" height="206">
+      </div>
+    </section>
+    <section class="bg BG_31">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_31.png" width="1000" height="1409">
+        <img class="lazy absolute thing31-1" data-src="images/thing31-1.png" width="875" height="914">
+        <img class="lazy absolute thing31-2" data-src="images/thing31-2.png" width="146" height="148">
+      </div>
+    </section>
+    <section class="bg BG_32">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_32.png" width="1000" height="1406">
+        <img class="lazy absolute thing32-1" data-src="images/thing32-1.png" width="459" height="779">
+        <img class="lazy absolute thing32-2" data-src="images/thing32-2.png" width="230" height="233">
+        <img class="lazy absolute thing32-3" data-src="images/thing32-3.png" width="172" height="174">
+      </div>
+    </section>
+    <section class="bg BG_33">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_33.png" width="1000" height="544">
+        <img class="lazy absolute thing33-1" data-src="images/thing33-1.png" width="762" height="757">
+        <img class="lazy absolute thing33-2" data-src="images/thing33-2.png" width="491" height="286">
+      </div>
+    </section>
+    <section class="bg BG_34">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_34.png" width="1000" height="2328">
+        <img class="lazy absolute thing34-0" data-src="images/thing34-0.png" width="1000" height="2328">
+        <img class="lazy absolute thing34-1" data-src="images/thing34-1.png" width="999" height="564">
+        <img class="lazy absolute thing34-2" data-src="images/thing34-2.png" width="858" height="310">
+        <img class="lazy absolute thing34-3" data-src="images/thing34-3.png" width="179" height="1367">
+      </div>
+    </section>
+    <section class="bg BG_35">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_35.png" width="1000" height="880">
+      </div>
+    </section>
+    <section class="bg BG_36">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_36.png" width="1000" height="1117">
+        <!-- 輪播圖 S -->
+        <div class="absolute thing36-1">
+          <!-- Swiper -->
+          <div class="swiper mySwiper4">
+            <div class="swiper-wrapper">
+              <!-- 自由編輯區 S -->
+              <div class="swiper-slide">
+                <img src="./images/slide/slide04-1.png" alt="" width="470" height="535">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide04-2.png" alt="" width="470" height="535">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide04-3.png" alt="" width="470" height="535">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide04-4.png" alt="" width="470" height="535">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide04-1.png" alt="" width="470" height="535">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide04-2.png" alt="" width="470" height="535">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide04-3.png" alt="" width="470" height="535">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slide/slide04-4.png" alt="" width="470" height="535">
+              </div>
+              <!-- 自由編輯區 E -->
+            </div>
+          </div>
+          <div class="swiper-button-next swiperBtnR_02"></div>
+          <div class="swiper-button-prev swiperBtnL_02"></div>
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+        <!-- 輪播圖 E -->
+      </div>
+    </section>
+    <section class="bg BG_37">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_37.png" width="1000" height="1788">
+      </div>
+    </section>
+    <section class="bg BG_38">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_38.png" width="1000" height="1580">
+      </div>
+    </section>
+    <section class="bg BG_39">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_39.png" width="1000" height="237">
+        <img class="lazy absolute thing39-1" data-src="images/thing39-1.png" width="1002" height="280">
+      </div>
+    </section>
+    <section class="bg BG_40">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_40.png" width="1000" height="2427">
+        <img class="lazy absolute thing40-bg" data-src="images/thing40-bg.png" width="1001" height="2901">
+        <img class="lazy absolute thing40-QA1-1" data-src="images/thing40-QA1-1.png" width="468" height="20">
+        <div class="QA01 absolute">
+
+          <div class="relative">
+            <img class="lazy absolute thing40-QAbtn_1-1" data-src="images/QA_btn_1.png" width="49" height="50">
+            <img class="lazy absolute thing40-QAbtn_1-2" data-src="images/QA_btn_2.png" width="49" height="50">
+            <img class="lazy thing40-QA1-3" data-src="images/thing40-QA1-3.png" width="865" height="192">
+          </div>
+          <img class="lazy thing40-QA1-2" data-src="images/thing40-QA1-2.png" width="865" height="311">
+        </div>
+        <img class="lazy absolute thing40-QA2-1" data-src="images/thing40-QA2-1.png" width="385" height="20">
+        <div class="QA02 absolute">
+          <div class="relative">
+            <img class="lazy absolute thing40-QAbtn_2-1" data-src="images/QA_btn_1.png" width="49" height="50">
+            <img class="lazy absolute thing40-QAbtn_2-2" data-src="images/QA_btn_2.png" width="49" height="50">
+            <img class="lazy thing40-QA2-3" data-src="images/thing40-QA2-3.png" width="864" height="192">
+          </div>
+          <img class="lazy thing40-QA2-2" data-src="images/thing40-QA2-2.png" width="864" height="511">
+        </div>
+        <img class="lazy absolute thing40-QA3-1" data-src="images/thing40-QA3-1.png" width="696" height="49">
+        <div class="QA03 absolute">
+          <div class="relative">
+            <img class="lazy absolute thing40-QAbtn_3-1" data-src="images/QA_btn_1.png" width="49" height="50">
+            <img class="lazy absolute thing40-QAbtn_3-2" data-src="images/QA_btn_2.png" width="49" height="50">
+            <img class="lazy thing40-QA3-3" data-src="images/thing40-QA3-3.png" width="864" height="191">
+          </div>
+          <img class="lazy thing40-QA3-2" data-src="images/thing40-QA3-2.png" width="864" height="723">
+        </div>
+      </div>
+    </section>
+    <section class="bg BG_41">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_41.png" width="1000" height="1683">
+      </div>
+    </section>
+    <section class="bg BG_42">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_42.png" width="1000" height="1624">
+        <img class="lazy absolute thing42-1" data-src="images/thing42-1.png" width="259" height="270">
+        <img class="lazy absolute thing42-2" data-src="images/thing42-2.png" width="931" height="422">
+      </div>
+    </section>
+    <section class="bg BG_43">
+      <div class="container relative">
+        <img class="lazy" data-src="./images/BG/BG_43.png" width="1000" height="1695">
+        <img class="lazy absolute thing43-1" data-src="images/thing43-1.png" width="338" height="56">
+        <img class="lazy absolute thing43-2" data-src="images/thing43-2.png" width="907" height="89">
+        <img class="lazy absolute thing43-3" data-src="images/thing43-3.png" width="929" height="445">
+        <img class="lazy absolute thing43-4" data-src="images/thing43-4.png" width="956" height="287">
+        <img class="lazy absolute thing43-5" data-src="images/thing43-5.png" width="1182" height="1128">
+      </div>
+    </section>
+    <!-- 收合S -->
+    <section class="bg4">
+      <div class="container relative">
+        <!-- img 放入 底圖 -->
+        <img class="lazy" data-src="https://fakeimg.pl/1000x1000/" alt="" width="1000" height="">
+        <p onclick="scrollShow('.QA1')"
+          style="cursor: pointer; font-size: 50px; background-color: #000; color:#fff; border-radius: 5px; padding: 1%; position: absolute; top: 5%; left: 25%;">
+          我是收合按鈕</p>
+      </div>
+    </section>
+
+    <section class="QA1 close_img">
+      <div class="container">
+        <div class="" style="height: 1000px; background-color: red;"></div>
+      </div>
+    </section>
+
+    <section class="bg4">
+      <div class="container relative">
+        <!-- img 放入 底圖 -->
+        <img class="lazy" data-src="https://fakeimg.pl/1000x1000/" alt="" width="1000" height="">
+
+        <!-- 彈跳視窗【按鈕】 -->
+        <p onclick="popUpShow('.pop01')"
+          style="cursor: pointer; font-size: 50px; background-color: #000; color:#fff; border-radius: 5px; padding: 1%; position: absolute; top: 5%; left: 25%;">
+          我是POPshow按鈕</p>
+
+
+      </div>
+    </section>
+
+
+
+
+  </div>
+  <!-- 彈跳視窗【結構】S -->
+  <section class="popBG  pop01">
+    <div class="popContainer relative">
+      <div class="xmarkControl">
+        <i class="fa-solid fa-xmark  js-xmark" onclick="popUpClose('.pop01')"></i>
+
+      </div>
+      <!-- 自由編輯區 S -->
+      <div class="box1" style="height: 500px;background: red;"></div>
+      <div class="box1" style="height: 500px;background: green;"></div>
+      <div class="box1" style="height: 500px;background: peru;"></div>
+      <!-- 自由編輯區 E -->
+    </div>
+  </section>
+  <!-- 彈跳視窗【結構】E -->
+
+
+
+
+
+
+
+
+  <!-- 【外部套件】JS導入 S -->
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <!-- WOW -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>new WOW().init();</script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: 120, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 400, // values from 0 to 3000, with step 50ms
+      easing: 'ease', // default easing for AOS animations
+      once: false, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    });
+  </script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+  <!-- 【外部套件】JS導入 E-->
+
+  <!-- JS導入 S -->
+
+  <!-- 圖片加載延遲 -->
+  <script src="js/lazy.js"></script>
+
+  <!-- 倒數計時  -->
+  <script src="js/clock.js"></script>
+
+  <!-- CTA -->
+  <script>
+    let CTAdata = {
+      variation: 1,//有3種模式請看Notion
+      href: "可以輸入網址 或 #ID",
+      lnkID: "lnk_99",
+      pastr: "LP名稱 EX:QQ01",
+      // spImg: "手機顯示圖片",
+      spImg: "https://fakeimg.pl/1000x250/",
+      // pcImg: "電腦顯示圖片",
+      pcImg: "https://fakeimg.pl/250x250/",
+    }
+  </script>
+  <!-- 不使用時就註解【下方】即可 -->
+  <!-- <script src="js/CTA.js"></script> -->
+
+  <!-- 若要設定時間來控制CTA，請使用下方的【CTA_control.js】 
+        上方的【務必註解】只能兩者擇一來使用 -->
+  <!-- <script src="js/CTA_control.js"></script> -->
+
+  <!-- 輪播圖 -->
+  <script src="js/slide.js"></script>
+  <!-- 其他設定 -->
+  <script src="js/all.js"></script>
+  <!-- JS導入 E -->
+
+
+
+</body>
+
+</html>
