@@ -1,3 +1,17 @@
+:root {
+    /* QA03 漸層邊框色 */
+    --gradient-color-1: #FBCF00;
+    --gradient-color-2: #FFFCD1;
+    --gradient-color-3: #CB9B0C;
+    --gradient-color-4: #F3E18B;
+    --gradient-color-5: #FFFCD1;
+    --gradient-pos-1: 0%;
+    --gradient-pos-2: 25.2809%;
+    --gradient-pos-3: 59.5506%;
+    --gradient-pos-4: 87.0786%;
+    --gradient-pos-5: 100%;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -748,8 +762,18 @@ a {
     width: 86.5%;
     top: 4.1%;
     left: 7%;
-    border: 1px solid red;
+    border: 1px solid transparent;
+    border-image: radial-gradient(
+        circle,
+        var(--gradient-color-1) var(--gradient-pos-1),
+        var(--gradient-color-2) var(--gradient-pos-2),
+        var(--gradient-color-3) var(--gradient-pos-3),
+        var(--gradient-color-4) var(--gradient-pos-4),
+        var(--gradient-color-5) var(--gradient-pos-5)
+    ) 1;
+    box-shadow: 7.5px 5px 12.5px rgb(159, 159, 159)
 }
+
 
 .thing40-QAbtn_1-1 {
     width: 5.7%;
@@ -787,7 +811,16 @@ a {
     width: 86.4%;
     top: 28.3%;
     left: 7%;
-    border: 1px solid red;
+    border: 1px solid transparent;
+    border-image: radial-gradient(
+        circle,
+        var(--gradient-color-1) var(--gradient-pos-1),
+        var(--gradient-color-2) var(--gradient-pos-2),
+        var(--gradient-color-3) var(--gradient-pos-3),
+        var(--gradient-color-4) var(--gradient-pos-4),
+        var(--gradient-color-5) var(--gradient-pos-5)
+    ) 1; 
+    box-shadow: 7.5px 5px 12.5px rgb(159, 159, 159)
 }
 .thing40-QAbtn_2-1 {
     width: 5.7%;
@@ -825,7 +858,16 @@ a {
     width: 86.4%;
     top: 60.3%;
     left: 7%;
-    border: 1px solid red;
+    border: 1px solid transparent;
+    border-image: radial-gradient(
+        circle,
+        var(--gradient-color-1) var(--gradient-pos-1),
+        var(--gradient-color-2) var(--gradient-pos-2),
+        var(--gradient-color-3) var(--gradient-pos-3),
+        var(--gradient-color-4) var(--gradient-pos-4),
+        var(--gradient-color-5) var(--gradient-pos-5)
+    ) 1; 
+    box-shadow: 7.5px 5px 12.5px rgb(159, 159, 159)
 }
 .thing40-QAbtn_3-1 {
     width: 5.7%;
@@ -848,7 +890,11 @@ a {
     width: 86.4%;
     top: 0%;
     left: 0%;
-} */
+} */@media (max-width: 1000px) {
+    .QA01, .QA02, .QA03 {
+        box-shadow: 2.5px 2.5px 7.5px rgb(159, 159, 159)
+    }
+}
 
 .thing42-1 {
     width: 25.9%;
