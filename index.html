@@ -51,8 +51,6 @@
   <!-- CSS導入 S -->
   <!-- 基礎設定 & 定位 -->
   <link rel="stylesheet" href="css/all.css">
-  <!-- 導覽列 -->
-  <link rel="stylesheet" href="css/nav.css">
   <!-- 其他 -->
   <link rel="stylesheet" href="css/other.css">
   <!-- 購物車 -->
@@ -65,16 +63,7 @@
 </head>
 
 <body>
-  <nav>
-    <!-- 倒數計時S  不使用時就註解即可 -->
-    <div class="clock-container">活動截止：<span id="timer"></span></div>
-    <!-- 倒數計時E -->
-
-    <!-- 導覽列S -->
-    <!-- 請看導覽列模板 -->
-    <!-- 導覽列E -->
-  </nav>
-
+ 
   <div class="wrap">
     <section class="bg BG_01">
       <div class="container relative z-1">
@@ -647,27 +636,6 @@
 
 
   </div>
-  <!-- 彈跳視窗【結構】S -->
-  <section class="popBG  pop01">
-    <div class="popContainer relative">
-      <div class="xmarkControl">
-        <i class="fa-solid fa-xmark  js-xmark" onclick="popUpClose('.pop01')"></i>
-
-      </div>
-      <!-- 自由編輯區 S -->
-      <div class="box1" style="height: 500px;background: red;"></div>
-      <div class="box1" style="height: 500px;background: green;"></div>
-      <div class="box1" style="height: 500px;background: peru;"></div>
-      <!-- 自由編輯區 E -->
-    </div>
-  </section>
-  <!-- 彈跳視窗【結構】E -->
-
-
-
-
-
-
 
 
   <!-- 【外部套件】JS導入 S -->
@@ -702,30 +670,6 @@
 
   <!-- 圖片加載延遲 -->
   <script src="js/lazy.js"></script>
-
-  <!-- 倒數計時  -->
-  <script src="js/clock.js"></script>
-
-  <!-- CTA -->
-  <script>
-    let CTAdata = {
-      variation: 1,//有3種模式請看Notion
-      href: "可以輸入網址 或 #ID",
-      lnkID: "lnk_99",
-      pastr: "LP名稱 EX:QQ01",
-      // spImg: "手機顯示圖片",
-      spImg: "https://fakeimg.pl/1000x250/",
-      // pcImg: "電腦顯示圖片",
-      pcImg: "https://fakeimg.pl/250x250/",
-    }
-  </script>
-  <!-- 不使用時就註解【下方】即可 -->
-  <!-- <script src="js/CTA.js"></script> -->
-
-  <!-- 若要設定時間來控制CTA，請使用下方的【CTA_control.js】 
-        上方的【務必註解】只能兩者擇一來使用 -->
-  <!-- <script src="js/CTA_control.js"></script> -->
-
   <!-- 輪播圖 -->
   <script src="js/slide.js"></script>
   <!-- 其他設定 -->
