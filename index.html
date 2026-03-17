@@ -16,31 +16,8 @@
 
 
   <!-- 【外部套件】CSS導入 S -->
-  <!-- jquery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- /*畫面跳到指定位置*/ -->
-  <script>
-    $(document).ready(function () {
-      $("a.scrollLink").click(function (event) {
-        event.preventDefault();
-        $("html, body").animate(
-          {
-            /* 0 可以替換 $("class名稱(要記得加.)").height() 【header有需要固定在最上方時 使用這個👇】*/
-            scrollTop: $($(this).attr("href")).offset().top - $("nav").height(),
-            // 【header不用固定在最上方時 使用這個👇】
-            // scrollTop: $($(this).attr("href")).offset().top - 0,
-          },
-          400
-        );
-      });
-    });
-  </script>
   <!-- AOS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <!-- font-Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- animate -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <!-- Link Swiper's CSS -->
@@ -430,7 +407,11 @@
       <div class="container relative">
         <img class="lazy" data-src="./images/BG/BG_26.png" width="1000" height="2150">
         <img class="lazy absolute thing26-1" data-src="images/thing26-1.png" width="259" height="271">
-        <img class="lazy absolute thing26-2" data-src="images/thing26-2.png" width="931" height="422">
+        <div class="absolute thing26-2">
+          <div class="light">
+            <img class="lazy" data-src="images/thing26-2.png" width="931" height="422">
+          </div>
+        </div>
       </div>
     </section>
     <section class="bg BG_27">
@@ -440,7 +421,13 @@
         <img class="lazy absolute thing27-2" data-src="images/thing27-2.png" width="907" height="89">
         <img class="lazy absolute thing27-3" data-src="images/thing27-3.png" width="944" height="465">
         <img class="lazy absolute thing27-4" data-src="images/thing27-4.png" width="1180" height="1127">
-        <img class="lazy absolute thing27-5" data-src="images/thing27-5.png" width="956" height="286">
+        <div class="absolute thing27-5">
+          <div class="light">
+            <img class="lazy" data-src="images/thing27-5.png" width="956" height="286">
+          </div>
+        </div>
+        <img class="lazy absolute thing27-2000" data-src="images/thing27-2000.png" width="549" height="217">
+        <div class="absolute thing27-2000-shine"><div class="thing27-2000-shine-bar"></div></div>
       </div>
     </section>
     <section class="bg BG_28">
@@ -698,7 +685,11 @@
       <div class="container relative">
         <img class="lazy" data-src="./images/BG/BG_42.png" width="1000" height="1624">
         <img class="lazy absolute thing42-1" data-src="images/thing42-1.png" width="259" height="270">
-        <img class="lazy absolute thing42-2" data-src="images/thing42-2.png" width="931" height="422">
+        <div class="absolute thing42-2">
+          <div class="light">
+            <img class="lazy" data-src="images/thing42-2.png" width="931" height="422">
+          </div>
+        </div>
       </div>
     </section>
     <section class="bg BG_43">
@@ -709,52 +700,17 @@
         <img class="lazy absolute thing43-3" data-src="images/thing43-3.png" width="944" height="465">
         <img class="lazy absolute thing43-4" data-src="images/thing43-4.png" width="956" height="287">
         <img class="lazy absolute thing43-5" data-src="images/thing43-5.png" width="1182" height="1128">
+        <img class="lazy absolute thing43-2000" data-src="images/thing43-2000.png" width="549" height="217">
+        <div class="absolute thing43-2000-shine"><div class="thing43-2000-shine-bar"></div></div>
       </div>
     </section>
-    <!-- 收合S -->
-    <section class="bg4">
-      <div class="container relative">
-        <!-- img 放入 底圖 -->
-        <img class="lazy" data-src="https://fakeimg.pl/1000x1000/" alt="" width="1000" height="">
-        <p onclick="scrollShow('.QA1')"
-          style="cursor: pointer; font-size: 50px; background-color: #000; color:#fff; border-radius: 5px; padding: 1%; position: absolute; top: 5%; left: 25%;">
-          我是收合按鈕</p>
-      </div>
-    </section>
-
-    <section class="QA1 close_img">
-      <div class="container">
-        <div class="" style="height: 1000px; background-color: red;"></div>
-      </div>
-    </section>
-
-    <section class="bg4">
-      <div class="container relative">
-        <!-- img 放入 底圖 -->
-        <img class="lazy" data-src="https://fakeimg.pl/1000x1000/" alt="" width="1000" height="">
-
-        <!-- 彈跳視窗【按鈕】 -->
-        <p onclick="popUpShow('.pop01')"
-          style="cursor: pointer; font-size: 50px; background-color: #000; color:#fff; border-radius: 5px; padding: 1%; position: absolute; top: 5%; left: 25%;">
-          我是POPshow按鈕</p>
-
-
-      </div>
-    </section>
-
-
-
-
   </div>
 
 
   <!-- 【外部套件】JS導入 S -->
   <!-- GSAP -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
-  <!-- WOW -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <script>new WOW().init();</script>
+ 
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>

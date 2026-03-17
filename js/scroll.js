@@ -72,4 +72,38 @@ scrollAnimate([
             gsap.fromTo(".thing18-2", { opacity: 0.5, }, { opacity: 1, duration: 0.5, ease: "power2.inOut" })
         }
     },
+    {
+        trigger: ".BG_26",
+        once: true,
+        animate: () => gsap.to(".thing26-1", { scale: 1.06, duration: 0.6, yoyo: true, repeat: 1, ease: "power2.inOut" }),
+    },
+    {
+        trigger: ".BG_27",
+        once: true,
+        animate: () => {
+            const tl = gsap.timeline({ repeat: -1, repeatDelay: 1.5, defaults: { transformOrigin: "bottom center" } })
+            tl.to(".thing27-5", { scaleY: 0.93, scaleX: 1.02, duration: 0.2, ease: "power2.in" })
+                .to(".thing27-5", { scaleY: 1.02, scaleX: 0.995, duration: 0.35, ease: "power2.out" })
+                .to(".thing27-5", { scaleY: 1, scaleX: 1, duration: 0.25, ease: "sine.inOut" })
+
+            gsap.to(".thing27-2000-shine-bar", { x: "350%", duration: 2, ease: "power2.inOut", delay: 0.4 })
+        },
+    },
+    {
+        trigger: ".BG_42",
+        once: true,
+        animate: () => gsap.to(".thing42-1", { scale: 1.06, duration: 0.6, yoyo: true, repeat: 1, ease: "power2.inOut" }),
+    },
+    {
+        trigger: ".BG_43",
+        once: true,
+        animate: () => {
+            const tl = gsap.timeline({ repeat: -1, repeatDelay: 1.5, defaults: { transformOrigin: "bottom center" } })
+            tl.to(".thing43-4", { scaleY: 0.93, scaleX: 1.02, duration: 0.2, ease: "power2.in" })
+                .to(".thing43-4", { scaleY: 1.02, scaleX: 0.995, duration: 0.35, ease: "power2.out" })
+                .to(".thing43-4", { scaleY: 1, scaleX: 1, duration: 0.25, ease: "sine.inOut" })
+
+            gsap.to(".thing43-2000-shine-bar", { x: "350%", duration: 2, ease: "power2.inOut", delay: 0.4 })
+        },
+    },
 ])

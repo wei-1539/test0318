@@ -759,6 +759,10 @@ a {
     width: 93.1%;
     top: 79.85%;
     left: 3.5%;
+    -webkit-mask: url("../images/thing26-2.png") no-repeat center center;
+    mask: url("../images/thing26-2.png") no-repeat center center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
 }
 
 .thing27-1 {
@@ -791,6 +795,43 @@ a {
     width: 95.6%;
     top: 68.1%;
     left: 3%;
+    -webkit-mask: url("../images/thing27-5.png") no-repeat center center;
+    mask: url("../images/thing27-5.png") no-repeat center center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+.thing27-2000 {
+    width: 54.9%;
+    top: 45%;
+    left: 12%;
+    -webkit-mask: url("../images/thing27-2000.png") no-repeat center center;
+    mask: url("../images/thing27-2000.png") no-repeat center center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+.thing27-2000-shine {
+    width: 54.9%;
+    top: 45%;
+    left: 12%;
+    aspect-ratio: 549 / 217;
+    overflow: hidden;
+    pointer-events: none;
+    -webkit-mask: url("../images/thing27-2000.png") no-repeat center center;
+    mask: url("../images/thing27-2000.png") no-repeat center center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+.thing27-2000-shine-bar {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 45%;
+    height: 120%;
+    background: linear-gradient(105deg, transparent 0%, rgba(255, 255, 255) 50%, transparent 100%);
+    transform: skewX(-12deg) translateX(-150%);
 }
 
 .thing29-1 {
@@ -1188,6 +1229,10 @@ a {
     width: 93.1%;
     top: 73.6%;
     left: 3.5%;
+    -webkit-mask: url("../images/thing42-2.png") no-repeat center center;
+    mask: url("../images/thing42-2.png") no-repeat center center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
 }
 
 .thing43-1 {
@@ -1220,4 +1265,37 @@ a {
     top: 5.3%;
     left: -1.7%;
     scale: 1.182;
+}
+
+.thing43-2000 {
+    width: 54.9%;
+    top: 44.5%;
+    left: 12%;
+    -webkit-mask: url("../images/thing43-2000.png") no-repeat center center;
+    mask: url("../images/thing43-2000.png") no-repeat center center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+.thing43-2000-shine {
+    width: 54.9%;
+    top: 44.5%;
+    left: 12%;
+    aspect-ratio: 549 / 217;
+    overflow: hidden;
+    pointer-events: none;
+    -webkit-mask: url("../images/thing43-2000.png") no-repeat center center;
+    mask: url("../images/thing43-2000.png") no-repeat center center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+.thing43-2000-shine-bar {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 45%;
+    height: 120%;
+    background: linear-gradient(105deg, transparent 0%, rgba(255, 255, 255) 50%, transparent 100%);
+    transform: skewX(-12deg) translateX(-150%);
 }
