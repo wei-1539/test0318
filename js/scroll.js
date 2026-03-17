@@ -32,6 +32,7 @@ function scrollAnimate(items) {
         targets.forEach((el) => obs.observe(el))
     })
 }
+
 scrollAnimate([
     {
         trigger: ".BG_08",
