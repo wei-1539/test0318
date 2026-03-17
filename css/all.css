@@ -161,13 +161,13 @@ a {
 
 .thing06-1 {
     width: 100%;
-    top: 31%;
+    top: 30%;
     left: 0%;
 }
 
 .thing07-1 {
     width: 100%;
-    top: 0%;
+    top: 2%;
     left: 0%;
 }
 
@@ -748,6 +748,13 @@ a {
     left: 0%;
     top: 27.5%;
 }
+@media (max-width: 768px) {
+    .thing24-1 {
+        width: 100%;
+        left: 0%;
+        top: 26%;
+    }
+}
 
 .thing26-1 {
     width: 25.9%;
@@ -1051,8 +1058,13 @@ a {
 
 .thing36-1 {
     width: 100%;
-    top: 0%;
+    top: 46.5%;
     left: 0%;
+}
+@media (max-width: 768px) {
+    .thing36-1 {
+        top: 44.5%;
+    }
 }
 
 .thing39-1 {

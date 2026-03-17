@@ -2,7 +2,7 @@ var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: "1.5",
+    slidesPerView: "1.45",
     loop: true,
     speed: 600,
     coverflowEffect: {
@@ -38,7 +38,7 @@ var swiper2 = new Swiper(".mySwiper2", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: "1.65",
+    slidesPerView: "1.7",
     loop: true,
     initialSlide: 0,
     speed: 600,

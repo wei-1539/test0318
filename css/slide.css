@@ -125,6 +125,64 @@
     border-color: #333;
 }
 
+/* 位置調整 */
+.thing06-1 .swiperBtnR,
+.thing06-1 .swiperBtnL {
+    top: 41.5%;
+}
+
+.thing06-1 .swiper-pagination {
+    bottom: 0.5%;
+}
+
+.thing07-1 .swiper-pagination {
+    bottom: -5.5%;
+}
+
+.thing24-1 .swiperBtnR,
+.thing24-1 .swiperBtnL {
+    width: 50px;
+    height: 50px;
+    top: 49%;
+}
+
+.thing24-1 .swiperBtnR {
+    right: 3.75%;
+}
+
+.thing24-1 .swiperBtnL {
+    left: 4.25%;
+}
+
+.thing24-1 .swiper-slide,
+.thing36-1 .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thing24-1 .swiper-pagination {
+    bottom: -1%;
+}
+
+.mySwiper4 .swiper-slide img {
+    margin-left: 4%;
+}
+
+.thing36-1 .swiperBtnR_02,
+.thing36-1 .swiperBtnL_02 {
+    width: 140px;
+    height: 25px;
+}
+
+.thing36-1 .swiperBtnR_02 {
+    right: 16.5%;
+}
+
+.thing36-1 .swiperBtnL_02 {
+    left: 17.5%;
+}
+
 @media (max-width: 768px) {
 
     .thing06-1 .swiper-pagination-bullet,
@@ -133,5 +191,63 @@
         width: 12px;
         border: 1px solid #333;
         height: 12px;
+        margin: 0 3.5px !important;
     }
+
+    /* 位置調整 */
+
+    .thing06-1 .swiper-pagination {
+        bottom: 4.25%;
+    }
+
+    .thing07-1 .swiper-pagination {
+        bottom: -6.5%;
+    }
+
+    .thing24-1 .swiperBtnR,
+    .thing24-1 .swiperBtnL {
+        width: 25px;
+        height: 25px;
+        top: 51%;
+    }
+
+    .mySwiper3 .swiper-slide img {
+        scale: 0.95;
+    }
+
+    .thing24-1 .swiper-pagination {
+        bottom: 1%;
+    }
+
+    .thing36-1 .swiperBtnR_02,
+    .thing36-1 .swiperBtnL_02 {
+        width: 65px;
+        height: 15px;
+        top: 54%;
+    }
+
+    .mySwiper4 .swiper-slide img {
+        scale: 0.92;
+    }
+}
+
+/* 影片輪播  */
+.slide01-video-box {
+    width: 92.7%;
+    height: 68%;
+    position: absolute;
+    top: 0.8%;
+    left: 3%;
+    /* background: red; */
+    -webkit-mask: url("../images/slide/slide01-mask.png") no-repeat center center;
+    mask: url("../images/slide/slide01-mask.png") no-repeat center center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+.slide01-video {
+    width: 120%;
+    height: 120%;
+    left: 50%;
+    transform: translateX(-50%);
 }
