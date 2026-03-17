@@ -629,6 +629,18 @@ a {
     left: 9.5%;
 }
 
+.thing20-1.collapse-trigger {
+    cursor: pointer;
+}
+
+.bg20-body {
+    position: absolute;
+    top: 19.5%;
+    left: 9.5%;
+    width: 81.1% !important;
+    overflow: hidden;
+}
+
 .thing21-1 {
     width: 58.7%;
     top: 22.1%;
@@ -692,7 +704,7 @@ a {
 .thing22-video-box {
     width: 82.8%;
     height: 36.2%;
-    top: 28.1%;
+    top: 27.8%;
     left: 8.6%;
     overflow: hidden;
 }
