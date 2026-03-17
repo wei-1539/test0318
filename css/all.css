@@ -579,23 +579,16 @@ a {
     opacity: 0.5;
 }
 
-.thing19-1 {
-    width: 0.4%;
-    top: 58.8%;
-    left: 50%;
-    z-index: 1;
+.thing19-beer-slider {
+    width: 81.2%;
+    top: 60.45%;
+    left: 9.4%;
 }
 
-.thing19-before {
-    width: 81.3%;
-    top: 60.56%;
-    left: 9%;
-}
-
-.thing19-after {
-    width: 81.3%;
-    top: 60.56%;
-    left: 9.3%;
+.thing19-beer-slider img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .thing19-2 {
@@ -684,6 +677,7 @@ a {
     left: 0%;
     scale: 1.026;
     mix-blend-mode: plus-lighter;
+    pointer-events: none;
 }
 
 .thing21-9 {
@@ -692,6 +686,7 @@ a {
     left: 0%;
     scale: 1.026;
     mix-blend-mode: lighten;
+    pointer-events: none;
 }
 
 .thing22-video-box {

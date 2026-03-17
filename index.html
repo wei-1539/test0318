@@ -46,11 +46,12 @@
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <!-- 【外部套件】CSS導入 E-->
+<!-- 【外部套件】CSS導入 E-->
 
   <!-- CSS導入 S -->
   <!-- 基礎設定 & 定位 -->
   <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/beer.css">
   <!-- 其他 -->
   <link rel="stylesheet" href="css/other.css">
   <!-- 購物車 -->
@@ -321,9 +322,12 @@
     <section class="bg BG_19">
       <div class="container relative">
         <img class="lazy" data-src="./images/BG/BG_19.png" width="1000" height="1558">
-        <img class="lazy absolute thing19-1" data-src="images/thing19-1.png" width="4" height="632">
-        <img class="lazy absolute thing19-before" data-src="images/before.png" width="813" height="581">
-        <img class="lazy absolute thing19-after" data-src="images/after.png" width="811" height="581">
+        <div class="absolute thing19-beer-slider beer-slider" data-beer-label="">
+          <img src="images/before.png" width="813" height="581" alt="before">
+          <div class="beer-reveal" data-beer-label="">
+            <img src="images/after.png" width="811" height="581" alt="after">
+          </div>
+        </div>
         <img class="lazy absolute thing19-2" data-src="images/thing19-2.png" width="559" height="559">
         <img class="lazy absolute thing19-3" data-src="images/thing19-3.png" width="564" height="554">
         <img class="lazy absolute thing19-4" data-src="images/thing19-4.png" width="348" height="82">
@@ -785,6 +789,11 @@
   <script src="js/video-scroll.js"></script>
   <!-- 其他設定 -->
   <script src="js/all.js"></script>
+  <!-- BeerSlider -->
+  <script src="https://cdn.jsdelivr.net/npm/beerslider/dist/BeerSlider.js"></script>
+  <script>
+    new BeerSlider(document.querySelector('.thing19-beer-slider'));
+  </script>
   <!-- JS導入 E -->
 
 
