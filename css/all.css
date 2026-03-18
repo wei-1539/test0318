@@ -629,26 +629,21 @@ a {
 
 .thing20-1 {
     width: 42.4%;
-    top: 11.5%;
+    top: 8.5%;
     left: 9.5%;
 }
 
 .thing20-2 {
-    width: 81.1%;
+    width: 81.2%;
     top: 19.5%;
     left: 9.5%;
 }
 
-.thing20-1.collapse-trigger {
+.thing20-3 {
+    width: 81.2%;
+    top: 19.5%;
+    left: 9.5%;
     cursor: pointer;
-}
-
-.bg20-body {
-    position: absolute;
-    top: 19.5%;
-    left: 9.5%;
-    width: 81.1% !important;
-    overflow: hidden;
 }
 
 .thing21-1 {

@@ -1,3 +1,30 @@
+// thing20-3：點擊淡出消失 / 淡入恢復
+function fadeToggle(selector, duration = 500) {
+    const el = document.querySelector(selector)
+    if (!el) return
+    el.style.transition = `opacity ${duration}ms`
+    el.style.cursor = "pointer"
+
+    el.addEventListener("click", () => {
+        if (el.dataset.hidden === "true") {
+            el.style.display = ""
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => (el.style.opacity = "1"))
+            })
+            el.dataset.hidden = "false"
+        } else {
+            el.style.opacity = "0"
+            setTimeout(() => {
+                el.dataset.hidden = "true"
+            }, duration)
+        }
+    })
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    fadeToggle(".thing20-3")
+})
+
 // 收合功能
 function scrollShow(scrollID) {
     const show = document.querySelectorAll(scrollID)
