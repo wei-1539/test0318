@@ -3,6 +3,12 @@ function scrollShow(scrollID) {
     const show = document.querySelectorAll(scrollID)
     show.forEach(element => {
         element.classList.toggle("show")
+
+        // QA 按鈕切換（關：btn_1 / 開：btn_2）
+        const qaWrap = element.closest(".QA01, .QA02, .QA03")
+        if (qaWrap) {
+            qaWrap.classList.toggle("is-open", element.classList.contains("show"))
+        }
     })
 }
 
