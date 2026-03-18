@@ -123,6 +123,16 @@
     background: url('../images/thing19-1.png') center / contain no-repeat;
 
 }
+.beer-handle:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(30px, 6.6vw, 66px);
+    aspect-ratio: 1 / 1;
+    background: url('../images/befor_after_btn.png') center / contain no-repeat;
+}
 
 /* .beer-handle:after {
     right: 0;
