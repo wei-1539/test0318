@@ -4,7 +4,11 @@ var swiper = new Swiper(".mySwiper", {
     centeredSlides: true,
     slidesPerView: "1.45",
     loop: true,
-    speed: 600,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    speed: 1000,
     coverflowEffect: {
         rotate: 0,
         stretch: 0,
@@ -41,7 +45,11 @@ var swiper2 = new Swiper(".mySwiper2", {
     slidesPerView: "1.7",
     loop: true,
     initialSlide: 0,
-    speed: 600,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    speed: 1000,
     coverflowEffect: {
         rotate: 0,
         stretch: 0,
@@ -78,7 +86,11 @@ var swiper3 = new Swiper(".mySwiper3", {
     slidesPerView: "1",
     loop: true,
     initialSlide: 0,
-    speed: 600,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    speed: 1000,
     coverflowEffect: {
         rotate: 0,
         stretch: 0,
@@ -116,7 +128,11 @@ var swiper4 = new Swiper(".mySwiper4", {
     slidesPerView: "1.95",
     loop: true,
     initialSlide: 0,
-    speed: 600,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    speed: 1000,
     coverflowEffect: {
         rotate: 0,
         stretch: 0,
