@@ -71,10 +71,18 @@ a {
 }
 
 /* 定位 thing 疊圖（width 依 index.html 對應 px/1000→%） */
+
+.thing02-0 {
+    width: 2.9%;
+    top: 3.25%;
+    right: 2.95%;
+    z-index: 1;
+}
+
 .thing02-1 {
-    width: 100%;
-    top: -0.5%;
-    left: 0%;
+    width: 99.4%;
+    top: 0.3%;
+    left: 0.5%;
     scale: 1.005;
     -webkit-mask: url("../images/thing01-1.png") no-repeat center center;
     mask: url("../images/thing01-1.png") no-repeat center center;
@@ -537,9 +545,11 @@ a {
 }
 
 .thing17-video {
-    width: 130%;
-    height: 130%;
-    top: -25%;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    transform: translateX(-50%);
+    left: 50%;
     object-fit: cover;
 }
 
@@ -746,6 +756,7 @@ a {
     left: 39.9%;
     overflow: hidden;
     border-radius: 100%;
+    rotate: -25deg;
 }
 
 .thing23-video {
