@@ -5,3 +5,40 @@
 .offerBtn:hover {
     opacity: 0.8;
 }
+
+/* CTA */
+#cta {
+    position: fixed;
+    right: 50%;
+    transform: translate(50%, 0%);
+    bottom: 0%;
+    width: 100%;
+    max-width: 1000px;
+    display: none;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.thing09-6 {
+    position: relative;
+    width: 90.6%;
+    margin: 0 auto;
+    -webkit-mask: url("../images/thing09-6.png") no-repeat center center;
+    mask: url("../images/thing09-6.png") no-repeat center center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+@media (max-width: 768px) {
+    .thing09-6 {
+        width: 100%;
+    }
+}
+
+.thing09-7 {
+    width: 62.9%;
+    top: -17%;
+    left: 18%;
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
